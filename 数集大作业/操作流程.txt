@@ -1,0 +1,23 @@
+1.把代码放到同一文件路径下
+2.打开modelsim输入如下命令，操作之前先把work文件夹删除
+vlib work
+vlog parameters.v
+vlog phase_gen.v
+vlog cordic.v
+vlog dds.v
+vlog testbench.v
+vsim -voptargs=+acc work.testbench
+add wave sim:/testbench/clk
+add wave sim:/testbench/rst_n
+
+add wave -radix signed sim:/testbench/y_re
+add wave -radix signed sim:/testbench/y_im
+
+add wave -radix signed sim:/testbench/square_wave
+add wave -radix signed sim:/testbench/triangle_wave
+
+add wave -radix unsigned sim:/testbench/u1/theta
+add wave -radix unsigned sim:/testbench/u1/phase_flag
+run 10us
+3.Modelsim生成的文件就是波形的参数,分别为wave_out.txt和dds_iq_out.txt
+4.运行Matlab即可看到对应的波形：复数单音信号（正弦波和余弦波），可调占空比方波和三角波

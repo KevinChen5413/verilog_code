@@ -1,0 +1,115 @@
+# //  ModelSim SE-64 10.4 Dec  3 2014 
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 20:49:41 on May 21,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# Loading work.testbench(fast)
+# Loading work.dds(fast)
+# Loading work.phase_gen(fast)
+# Loading work.cordic(fast)
+add wave -r /*
+run 10us
+run 1us
+# ** Note: $stop    : testbench.v(38)
+#    Time: 10100 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at testbench.v line 38
+restart
+quit -sim
+vsim -voptargs=+acc work.testbench
+# vsim 
+# Start time: 20:51:24 on May 21,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# 
+# Loading work.testbench(fast)
+# Loading work.dds(fast)
+# Loading work.phase_gen(fast)
+# Loading work.cordic(fast)
+add wave -r/*
+# Unrecognized option: "-r/*" ignored.
+# Missing signal name or pattern.
+add wave -r /*
+run 1us
+quit -sim
+vsim -voptargs=+acc work.testbench
+# vsim 
+# Start time: 20:52:30 on May 21,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# 
+# Loading work.testbench(fast)
+# Loading work.dds(fast)
+# Loading work.phase_gen(fast)
+# Loading work.cordic(fast)
+add wave -r /*
+run 100ns
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# 
+# Loading work.testbench(fast)
+# Loading work.dds(fast)
+# Loading work.phase_gen(fast)
+# Loading work.cordic(fast)
+quit -sim
+vsim -voptargs=+acc work.testbench
+# vsim 
+# Start time: 20:53:52 on May 21,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# 
+# Loading work.testbench(fast)
+# Loading work.dds(fast)
+# Loading work.phase_gen(fast)
+# Loading work.cordic(fast)
+add wave -r /*
+run 10ns
+quit -sim
+vsim -voptargs=+acc work.testbench
+# vsim 
+# Start time: 20:54:43 on May 21,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# 
+# Loading work.testbench(fast)
+# Loading work.dds(fast)
+# Loading work.phase_gen(fast)
+# Loading work.cordic(fast)
+add wave -r /*
+run 20us
+# ** Note: $stop    : testbench.v(38)
+#    Time: 10100 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at testbench.v line 38
+quit -sim
+vsim -voptargs=+acc work.testbench
+# vsim 
+# Start time: 20:56:52 on May 21,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# 
+# Loading work.testbench(fast)
+# Loading work.dds(fast)
+# Loading work.phase_gen(fast)
+# Loading work.cordic(fast)
+add wave sim:/testbench/clk
+add wave sim:/testbench/rst_n
+add wave -radix unsigned sim:/testbench/freq_k
+add wave -radix unsigned sim:/testbench/duty_ctrl
+add wave -radix unsigned sim:/testbench/y_re
+add wave -radix unsigned sim:/testbench/y_im
+add wave -radix unsigned sim:/testbench/square_wave
+add wave -radix unsigned sim:/testbench/triangle_wave
+add wave -radix unsigned sim:/testbench/u1/theta
+add wave -radix unsigned sim:/testbench/u1/phase_flag
+run 20us
+# ** Note: $stop    : testbench.v(38)
+#    Time: 10100 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at testbench.v line 38
+quit -sim
